@@ -1,0 +1,146 @@
+  html,body{
+  height: 100%;
+  margin: 0px auto;
+  padding: 0px;
+}
+#wrap{
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  min-height: 100%;
+  min-width: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+section{
+  min-height: 480px;
+}
+.paging{
+  position:fixed;
+  top: 0px;
+  right: 0px;
+  width: 100%;
+  height: 100%;
+}
+.page-button{
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+  font-weight: 100;
+  line-height: 20px;
+  color: #fff;
+  text-align: center;
+  background: #222;
+  border: 3px solid #fff;
+  -webkit-border-radius: 23px;
+  -moz-border-radius: 23px;
+  border-radius: 23px;
+  opacity: .5;
+  filter: alpha(opacity=50);
+  margin: 5px;
+}
+a.page-button, a.page-button:visited a, a .page-button, a:visited .page-button{
+  color: #ffffff;
+  text-decoration:none;
+} 
+a.page-button:hover,a.page-button:active, a:hover .page-button, a:active .page-button{
+  background-color: #ffffff;
+  color: #000000;
+  text-decoration:none;
+}
+
+ol.page-indicators{
+  position: fixed;
+  width: 30px;
+  right: 20px;
+  top: 50px;
+}
+ol.page-indicators li{
+  display: block;
+  float: left;
+  width: 10px;
+  height: 10px;
+  text-indent: -999px;
+  background-color: #ccc;
+  background-color: rgba(255,255,255,0.25);
+  border-radius: 5px;
+  margin-bottom: 5px;
+  margin-left: 12.5px;
+}
+ol.page-indicators li.active{
+  background-color: #fff;
+}
+/* READ MORE BUTTON */
+.next, .top{
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  text-align:center;
+  color: #ffffff;
+}
+a.next, a.top{
+  color: #ffffff;
+}
+a.next:hover, a.top:hover{
+  color: #ffffff;
+}
+.next span, .top span{
+  display:inline-block;
+}
+.next .page-button, .top .page-button{
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 50px;
+  width: 60px;
+  height: 60px;
+  border-radius: 60px;
+  color: #ffffff;
+}
+
+/* PAGE SPECIFIC STYLE */
+
+body[data-page='page6'] .next{
+ display:none; 
+}
+.top{
+  display:none;
+}
+body[data-page='page6'] .top{
+ display: block; 
+}
+
+body{
+  color: #ffffff;
+}
+
+section{
+  background-size: cover;
+  background-position: center center;
+  padding: 50px 20px;
+}
+
+section .content{
+  text-align: center;
+  vertical-align: middle;
+}
+
+section#page1{
+  background-image:url('../images/Crater_Lake__Winter_by_MarcAdamus.jpg');
+}
+section#page2{
+  background-image:url('../images/Lost_Paradise_by_Gwarf.jpg');
+}
+section#page3{
+  background-image:url('../images/Room_With_A_View_by_Nzeman.jpg');
+}
+section#page4{
+  background-image:url('../images/snow_paradise_by_mareika.jpg');
+}
+section#page5{
+  background-image:url('../images/Entrance_to_Paradise_by_AntiSpy.jpg');
+}
+section#page6{
+  background-image:url('../images/Evening_at_Rydal_Water_by_scotto.jpg');
+}
