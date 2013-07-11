@@ -1,17 +1,20 @@
 
 !function ($) {
 
-  function setIndicator(){
+  function setIndicator(anchor){
+    if(anchor==undefined){ anchor = $('section').first() }
     $('[data-anchor]').removeClass('active');
-    var anchor = window.location.hash.replace('#','');
-    if(anchor==''){ anchor = $('section').first().attr('id'); }
-    $('[data-anchor='+anchor+']').addClass('active');
-    $('body').attr('data-page', anchor);
+    var id = $(anchor).attr('id');
+    $('[data-anchor='+id+']').addClass('active');
+    $('body').attr('data-page', id);
   }
 
   function resizePage(){
+    original = $(document).height();
     $("#wrap").height($(window).height()*$('section').length);
-    $("section").css('height', ((100/$('section').length)+.001)+"%");
+    $("section").css('height', ((100/$('section').length))+"%");
+    console.log($("section").height())
+    console.log($("#wrap").height())
     setIndicator();
   }
 
@@ -20,8 +23,7 @@
     $('html, body').stop().animate({
       'scrollTop': $anchor.offset().top
     }, 900, 'swing', function () {
-      window.location.hash = anchor;
-      setIndicator();
+      setIndicator($anchor);
     });
   }
 
