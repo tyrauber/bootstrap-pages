@@ -2,9 +2,8 @@
 !function ($) {
 
   function setIndicator(anchor){
-    if(anchor==undefined){ anchor = $('section').first() }
     $('[data-anchor]').removeClass('active');
-    var id = $(anchor).attr('id');
+    var id = $('ul.nav li.active a').attr('data-anchor');
     $('[data-anchor='+id+']').addClass('active');
     $('body').attr('data-page', id);
   }
@@ -12,9 +11,7 @@
   function resizePage(){
     original = $(document).height();
     $("#wrap").height($(window).height()*$('section').length);
-    $("section").css('height', ((100/$('section').length))+"%");
-    console.log($("section").height())
-    console.log($("#wrap").height())
+    $("section").css('height', (100/$('section').length)+.001+"%");
     setIndicator();
   }
 

@@ -118,12 +118,24 @@ body{
 section{
   background-size: cover;
   background-position: center center;
-  padding: 50px 20px;
+  display:table;
+  width: 100%;
 }
 
 section .content{
   text-align: center;
   vertical-align: middle;
+  padding: 50px;
+  height: 100%;
+  width: 100%;
+  display: table-cell;
+}
+section .content .wrapper{
+  display:inline-block;
+  margin: 0px auto;
+  padding: 20px;
+  max-width: 60%;
+  background-color: rgba(0,0,0,0.5);
 }
 
 section#page1{
